@@ -74,10 +74,13 @@
 									</p>
 									<p>
 										I have done research and projects in a wide variety of areas.
-										During my time at Virginia Tech, I worked on projects related to <a href="#GAN">image to image translation</a> and <a href="#HOI">human object detection</a>.
-										During my master degree at <a href="https://umich.edu/">University of Michigan</a>, I have worked with Prof. Jonsh-Robinson on <a href="#detection">object detection in the driving scene</a>.
-										Before that, I also worked with <a href="https://web.eecs.umich.edu/~fessler/">Prof. Jeffrey A. Fessler</a> on an <a href="#denoising">image denoising project</a>.
-										Recommended by Prof. Jeffrey A. Fessler, I then worked with <a href="https://medicine.umich.edu/dept/radiology/yuni-dewaraja-phd">Prof. Yuni K Dewaraja</a> on <a href="#medical">medical image processing</a>.
+										During my time at Virginia Tech,
+										I worked on projects related to the <a href="#GAN">image to image translation</a> and <a href="#HOI">human object detection</a>.
+										During my master's degree at the <a href="https://umich.edu/">University of Michigan</a>,
+										I worked with <a href="https://web.eecs.umich.edu/~fessler/">Prof. Jeffrey A. Fessler</a> on an <a href="#denoising">image denoising project</a>.
+										Recommended by Prof. Jeffrey A. Fessler,
+										I then worked with <a href="https://medicine.umich.edu/dept/radiology/yuni-dewaraja-phd">Prof. Yuni K Dewaraja</a> on <a href="#medical">medical image processing</a>.
+										After that, I have worked with <a href="https://droplab.engin.umich.edu/matthew-johnson-roberson">Prof. Matthew Johnson-Roberson</a> on <a href="#detection">object detection in the driving scene</a>.
 
 									</p>
 									<!--<h3>Affiliations</h3>-->
@@ -101,22 +104,25 @@
 											</div></span>
 											<!-- <span class="image left"><iframe width="560" height="315" src="https://www.youtube.com/embed/Tjos-i271kY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span> -->
 											<!-- <span class="imag1e left"><iframe width=100% height=100% src="https://www.youtube.com/embed/vmSRGDuz8x0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span> -->
-											<h4>Robust Online Motion Planning for Segway Robotics Mobility Platform</h4>
+											<h4>Semantic Image to Image Translation</h4>
 											<p>
-											This work extends and applies <a href="#Theory">optimization and control theory</a> to autonomous driving task.
-											By leveraging both online and offline computation, the proposed framework is able to keep the autonomous provably safe in real-time experiments.
+												Existing methods have shown great success in generating images with diverse attributes.
+												But can we generate images with specific attributes?
 											</p>
 											<p>
-												The planning framework uses full-order model of the the vehicle to track desired trajecotries in a lower-dimensional subspace.
-												A Forward Reachable Set (FRS of the full-order model is first computed <b>offline</b> to capture all possible future states of the vehicle up to some time horizon by accounting for tracking errors.
-												This FRS is then used at run-time to map obstacles to constraints for an online MPC, which ensures safe trajectories can be picked in an <b>online</b> fashion.
-												To ease the computation burden during real time operation, obstacles are discretized;
-												and to ensure feasibility, braking maneuver is introduced as a backup controller in case of planning failure.
-												Moreover, the online MPC is solved on GPU using <a href="#BA">Parallel Bernstein Algorithm</a> to greatly improve computation speed and the chance of finding optimal solutions.
+												We propose a novel Semantic Generative Adversarial Network to generate images with attributes specified explicitly.
+												The inputs are an edge image along with sentences, where the sentences serve as the guidance for generator.
+												The output is a synthetic image with specific attributes described by the sentences.
+												Ou approach is to concatenate the desired attribute embedding with image features learned in the generator
+												and apply a discriminator to distinguish whether the generated image is real or fake.
 											</p>
 											<p>
-												This method is tested on a Segway platform in an autonomous driving scenario with randomly generated obstacles,
-												and has demonstrated faster and more robust than generic methods.
+												This method is tested on Pix2pix and achieved lower Mean Average Error than Pix2pix.
+												We further demonstrated that this simple yet effective approach could manipulate the specific attributes of generated images
+
+												Our code is available at <a href="https://github.com/e-271/semantic_image_translation">Github</a>
+												<!--This method is tested on a Segway platform in an autonomous driving scenario with randomly generated obstacles,-->
+												<!--and has demonstrated faster and more robust than generic methods.-->
 											</p>
 										</article>
 
@@ -136,9 +142,9 @@
     										<iframe class="youtube-video" src="https://www.youtube.com/embed/Tjos-i271kY"></iframe>
 											</div></span>
 											<!-- <span class="image right"><iframe width="560" height="315" src="https://www.youtube.com/embed/Tjos-i271kY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span> -->
-											<h4>Safe, Online Control for <a href="http://www.agilityrobotics.com/robots#cassie">Cassie</a> (Ongoing Work)</h4>
+											<h4>Spatial-Semantic Aware Relation Network for Human-Object Interaction Detection (Ongoing Work)</h4>
 											<p>
-												This work focuses on developing a safe, online MPC framework to control a robot <a href="http://www.agilityrobotics.com/robots#cassie">Cassie</a>.
+												This work focuses on tackling the challenging problem of human-object interaction (HOI) detection.
 											</p>
 											<p>
 												Cassie is a 3D biped robot with 10 actuators and 20 degrees of freedom.
@@ -449,49 +455,34 @@
 								<div class="container">
 									<h2>Publications</h2>
 									</br>
-									<h4>Academic Papers</h4>
+									<!--<h4>Academic Papers</h4>-->
 									<p></p>
 									<div class="inner">
 										<p>
-											J. Liu, <b>P. Zhao</b>, Z. Gan, M. Johnson-Roberson, and R. Vasudevan.
-											"Leveraging the Template and Anchor Framework for Safe, Online Robotic Gait Design".
-											<i>IEEE Robotics and Automation Letters</i>, In Review, 2019.
-											<a href="https://arxiv.org/abs/1909.11125">[arXiv preprint]</a>
-										</p>
-										<p>
-											<b>P. Zhao</b>, S. Mohan, and R. Vasudevan.
-											"Optimal Control of Polynomial Hybrid Systems via Convex Relaxations".
-											<i>IEEE Transactions on Automatic Control</i>, 2019.
-											<a href="https://ieeexplore.ieee.org/abstract/document/8765411">[URL]</a>
-										</p>
-										<p>
-											<b>P. Zhao</b> and R. Vasudevan.
-											"Nonlinear Hybrid Optimal Control With Switching Costs via Occupation Measures and LMI-Relaxations".
-											<i>American Control Conference (ACC)</i>, 2019.
-											<A href="https://ieeexplore.ieee.org/abstract/document/8814753">[URL]</a>
-										</p>
-										<p>
-											<b>P. Zhao</b>, S. Mohan, and R. Vasudevan.
-											"Control Synthesis for Nonlinear Optimal Control via Convex Relaxations".
-											<i>American Control Conference (ACC)</i>, 2017.
-											<A href="https://ieeexplore.ieee.org/abstract/document/7963353">[URL]</a>
+											L. Wei, <b>J. Xu</b>, et al.
+											“Y-90 PET radiomics modeling analysis for response prediction within hours of radioembolization in liver cancer patients”.
+											Annual Congress of the European Association of Nuclear Medicine, 2018
+											<!--J. Liu, <b>P. Zhao</b>, Z. Gan, M. Johnson-Roberson, and R. Vasudevan.-->
+											<!--"Leveraging the Template and Anchor Framework for Safe, Online Robotic Gait Design".-->
+											<!--<i>IEEE Robotics and Automation Letters</i>, In Review, 2019.-->
+											<!--<a href="https://arxiv.org/abs/1909.11125">[arXiv preprint]</a>-->
 										</p>
 									</div>
 
-									<h4>Workshop and Meeting Presentations</h4>
-									<p></p>
-									<div class="inner">
-										<p>
-											<b>P. Zhao</b>, J. Liu, Z. Gan, M. Johnson-Roberson, and R. Vasudevan.
-											"Ensuring Safe Walking During Online Motion Planning for Bipedal Robots".
-											<i>Dynamic Walking</i>, 2019
-										</p>
-										<p>
-											<b>P. Zhao</b>, S. Mohan, and R. Vasudevan.
-											"Optimal Control for Nonlinear Hybrid Systems via Convex Relaxation".
-											<i>Midwest Robotics Workshop</i>, 2019.
-										</p>
-									</div>
+									<!--<h4>Workshop and Meeting Presentations</h4>-->
+									<!--<p></p>-->
+									<!--<div class="inner">-->
+										<!--<p>-->
+											<!--<b>P. Zhao</b>, J. Liu, Z. Gan, M. Johnson-Roberson, and R. Vasudevan.-->
+											<!--"Ensuring Safe Walking During Online Motion Planning for Bipedal Robots".-->
+											<!--<i>Dynamic Walking</i>, 2019-->
+										<!--</p>-->
+										<!--<p>-->
+											<!--<b>P. Zhao</b>, S. Mohan, and R. Vasudevan.-->
+											<!--"Optimal Control for Nonlinear Hybrid Systems via Convex Relaxation".-->
+											<!--<i>Midwest Robotics Workshop</i>, 2019.-->
+										<!--</p>-->
+									<!--</div>-->
 								</div>
 							</section>
 
