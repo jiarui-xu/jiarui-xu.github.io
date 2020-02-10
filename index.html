@@ -118,9 +118,9 @@
 											</p>
 											<p>
 												This method is tested on Pix2pix and achieved lower Mean Average Error than Pix2pix.
-												We further demonstrated that this simple yet effective approach could manipulate the specific attributes of generated images
+												We further demonstrated that this simple yet effective approach could manipulate the specific attributes of generated images.
 
-												Our code is available at <a href="https://github.com/e-271/semantic_image_translation">Github</a>
+												Our code is available at <a href="https://github.com/e-271/semantic_image_translation">https://github.com/e-271/semantic_image_translation</a>
 												<!--This method is tested on a Segway platform in an autonomous driving scenario with randomly generated obstacles,-->
 												<!--and has demonstrated faster and more robust than generic methods.-->
 											</p>
@@ -137,63 +137,19 @@
 									<div class="features">
 
 										<article>
-											<div id="Cassie"></div>
-											<span class="image right"><div class="youtube-video-container">
-    										<iframe class="youtube-video" src="https://www.youtube.com/embed/Tjos-i271kY"></iframe>
-											</div></span>
+											<div id="SSAR"></div>
+											<span class="image right"><img src="images/HOI.jpg" alt="" width="560" /></span>
+											<!--<span class="image right"><div class="youtube-video-container">-->
+    										<!--<iframe class="youtube-video" src="https://www.youtube.com/embed/Tjos-i271kY"></iframe>-->
+											<!--</div></span>-->
 											<!-- <span class="image right"><iframe width="560" height="315" src="https://www.youtube.com/embed/Tjos-i271kY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span> -->
-											<h4>Spatial-Semantic Aware Relation Network for Human-Object Interaction Detection (Ongoing Work)</h4>
+											<h4>Spatial-Semantic Relation Network for Human-Object Interaction Detection (Ongoing Work)</h4>
 											<p>
 												This work focuses on tackling the challenging problem of human-object interaction (HOI) detection.
-											</p>
-											<p>
-												Cassie is a 3D biped robot with 10 actuators and 20 degrees of freedom.
-												Due to Cassie's high degree of freedom, underactuation, and complex impact model, generating safety guarantees of such system online can be extremely challenging.
-												To make reasonable predictions of its future states, Cassie is first programmed to track the motion of a simplistic inverted pendulum model.
-												By combining the maximum possible tracking error to predicted motion of the simplistic model, one may obtain a hybrid Forward Reachable Set (FRS) of Cassie
-												which contains all possible behaviors of the robot up to some time horizion.
-												I am currently developing algorithm to include such FRS as safety constraints for online MPC.
-											</p>
-										</article>
-
-										<article>
-											<div id="RABBIT"></div>
-											<span class="image left"><div class="youtube-video-container">
-    										<iframe class="youtube-video" src="https://www.youtube.com/embed/BzUpWqwfxqM"></iframe>
-											</div></span>
-											<!-- <span class="image left"><iframe width="560" height="315" src="https://www.youtube.com/embed/BzUpWqwfxqM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span> -->
-											<h4>Safe, Online Gait Design for <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1234651">RABBIT</a> Model</h4>
-											<p>
-												This work further extends the <a href="#Segway">online motion planning framework</a> to generate an online control framework for legged robots.
-												<!-- control planar
-												<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1234651">RABBIT</a> model in an online fashion. -->
-												Formal guarantees of safety is established for such method using reachability analysis techniques for discrete-time systems.
-											</p>
-											<p>
-												We leverage the <a href="https://jeb.biologists.org/content/202/23/3325.short">anchor and template framework</a>
-												to construct a simple model (template) whose outputs are sufficient to predict the behavior of the full model's (anchor's) outputs.
-												A parameterized Forward Reachable Set (FRS) is first computed offline to describe the evolution of the discrete-time outputs of the simple model.
-												By bounding the discrepency between template and anchor models, one may obtain an outer approximation of FRS of the full-order robot.
-												This FRS is then fed to an online MPC framework as safety constraints, which are sufficient to ensure N-step walking that does not fall over.
-											</p>
-											<p>
-												The proposed framework is implemented on a 14-dimensional model of the robot <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1234651">RABBIT</a> as shown in the above video.
-												Unlike generic methods, this approach is capable of performing online computation while preventing the robot from falling.
-											</p>
-										</article>
-
-										<article>
-											<div id="PCbot"></div>
-											<span class="image right"><img src="images/PCbot.gif" alt="" width="560" /></span>
-											<h4>System Identification of <a href="https://www.youtube.com/watch?v=bnKOeMoibLg">Minitaur &trade;</a> Robot</h4>
-											<p>
-												This work involves state estimation and system identification of <a href="https://www.youtube.com/watch?v=bnKOeMoibLg">Minitaur &trade;</a> Robot.
-											</p>
-											<p>
-												The robot is programmed using embedded C to follow various footfall patterns.
-												Then, forward kinematics is computed using filtered IMU and encoder data,
-												and the robot motion is also recorded by <a href="http://phasespace.com">PhaseSpace</a> motion capture system.
-												Finally, a planar dynamical model is fit to these recorded data, and such model is verified in further experiments.
+												We propose to use a spatial-semantic representation to describe each human-object pair
+												and leverage a relation module to aggregate contextual information of the scene to resolve ambiguity from local predictions.
+												Our model is conceptually simple and leads to favorable results
+												when compared to the state-of-the-art HOI detection algorithms on two large-scale benchmark datasets.
 											</p>
 										</article>
 
@@ -208,71 +164,24 @@
 									<div class="features">
 
 										<article>
-											<div id="OCP"></div>
-											<span class="image left"><img src="images/Dubins.png" alt="" width="560" /></span>
-											<h4>Control Synthesis for Nonlinear Optimal Control via Convex Relaxations</h4>
+											<div id="MCWSNM"></div>
+											<span class="image left"><img src="images/MCWSNM.png" alt="" width="560" /></span>
+											<h4>Multi-channel Weighted Schatten p-Norm Minimization for Color Image Denoising</h4>
+											<!--<p>-->
+												<!--why do people care about this problem?-->
+											<!--</p>-->
 											<p>
-												This work addresses the problem of control synthesis for nonlinear optimal control problems in the presence of state and input constraints.
-												The proposed aproach relies upon transforming the given problem into inifinite-dimensional linear program over the space of measures,
-												and convergence to global optima is guaranteed as degree of relaxtion goes up.
+												This work addresses the classical yet fundamental problem, color image denoising, for image quality enhancement in computer vision.
 											</p>
 											<p>
-												The picture shown above is an illustration of proposed method on an LQR version of the Dubins Car problem.
-												The blue circle indicates the given initial state, and the blue dot shows the target point.
-												The ground truth solution for such problem is colored in blue, and red lines are control actions generated by our method.
+												We propose the Multi-channel Weighted Schatten p-Norm Minimization (MC-WSNM) method to address the color image denoising problem, which is based on the Multi-channel Weighted Nuclear Norm Minimization (MC-WNNM) method.
+												Weighted Schatten p-norm is applied as it can guarantee a more accurate recovery of the signal while requiring only a weaker isomery property than tranditional trace norm.
 											</p>
 											<p>
-												This work can be extended to address <a href="#HOCP">hybrid optimal control</a>,
-												<a href="https://github.com/ramvasudevan/RTD">reachability analysis</a>,
-												<a href="">inverse optimal control</a>, and
-												<a href="">stochastic optimal control</a>.
+												The picture shown above is a comparation between the denoising results of our MC-WSNM and MC-WNNM method.
+												Our method has achieved both a higher PSNR and a 10+ times faster speed in denoising than MC-WNNM method
 											</p>
 										</article>
-
-										<article>
-											<div id="HOCP"></div>
-											<span class="image right"><img src="images/HOCP_1.gif" alt="" width="400" />
-											<img src="images/HOCP_2.gif" alt="" width="400" /></span>
-											<h4>Hybrid Optimal Control With Guaranteed Global Convergence</h4>
-											<p>
-												Many dynamical systems may undergo instantaneous state changes due to satisfaction of certain state-dependent constraints.
-												Examples of such systems include legged robots, where the velocity of limbs changes instantaneously due to impacts with the ground.
-												<!-- , and ??? -->
-												The optimal control of hybrid systems are especially difficult to solve not only because of the discontinuity in states and controls,
-												but also due to the combinatorial nature of possible transition sequences.
-												State-of-the-art solvers struggle to find globally optimal solutions for these problems under nonliner state and input constraints.
-											</p>
-											<p>
-												This work focuses on extending the <a href="#OCP">convex relaxation-based optimal control framework</a> to solving hybrid systems.
-												By introducing measures that capture the trajectories entering and leaving each hybird modes,
-												the proposed method is able to find globally optimal trajectories regardless of transition sequence being potentially unknown.
-											</p>
-											<p>
-												As an exmpale, the proposed method is implemented to solve optimal control of a single-leg hopper, as shown in the above images.
-												The goal in the first image is to jump as high as possible, and the goal in the second image is to slow down from a large horizontal velocity.
-												Other applications include reachability analysis for hybrid systems (e.g.,  <a href="#Robotics">legged robots</a> ).
-											</p>
-										</article>
-
-										<article>
-											<div id="BA"></div>
-											<span class="image left"><img src="images/BA.gif" alt="" width="560" /></span>
-											<h4>Parallel Bernstein Algorithm for Constrained Global Optimization</h4>
-											<p>
-												In this work I developed a parallel algorithm for solving optimization problems with polynomial constraints and cost functions (a.k.a. polynomial optimization problems) using Bernstein expansion.
-												This approach relies upon bounding the values of polynomials in shrinking subsets of the domain (see the animation on the left),
-												and is able to find all global optimizers to polynomial optimization problems within polynomial time.
-											</p>
-											<p>
-												Such algorithm can be implemented on either multi-core CPUs or GPUs to significantly reduce computation time.
-												The rate of convergence of such algorithm is proved to be either linear or quadratic, depending on the problem settings,
-												and a practical bound on the maximum memory usage is provided.
-												This approach is implemented both in MATLAB (CPU) and in CUDA C++ (GPU),
-												and proven faster than generic methods on an array of benchmark examples
-												as well as in a real-world <a href="#Segway">autonomous driving planning task</a>.
-											</p>
-										</article>
-
 									</div>
 								</div>
 							</section>
@@ -284,9 +193,9 @@
 									<div class="features">
 
 										<article>
-											<div id="OCP"></div>
-											<span class="image left"><img src="images/Dubins.png" alt="" width="560" /></span>
-											<h4>Control Synthesis for Nonlinear Optimal Control via Convex Relaxations</h4>
+											<div id="obj_det"></div>
+											<span class="image left"><img src="images/object_detection.png" alt="" width="560" /></span>
+											<h4>Learning from real world images for object detection in autonomous vehicles</h4>
 											<p>
 												This work addresses the problem of control synthesis for nonlinear optimal control problems in the presence of state and input constraints.
 												The proposed aproach relies upon transforming the given problem into inifinite-dimensional linear program over the space of measures,
@@ -302,50 +211,6 @@
 												<a href="https://github.com/ramvasudevan/RTD">reachability analysis</a>,
 												<a href="">inverse optimal control</a>, and
 												<a href="">stochastic optimal control</a>.
-											</p>
-										</article>
-
-										<article>
-											<div id="HOCP"></div>
-											<span class="image right"><img src="images/HOCP_1.gif" alt="" width="400" />
-											<img src="images/HOCP_2.gif" alt="" width="400" /></span>
-											<h4>Hybrid Optimal Control With Guaranteed Global Convergence</h4>
-											<p>
-												Many dynamical systems may undergo instantaneous state changes due to satisfaction of certain state-dependent constraints.
-												Examples of such systems include legged robots, where the velocity of limbs changes instantaneously due to impacts with the ground.
-												<!-- , and ??? -->
-												The optimal control of hybrid systems are especially difficult to solve not only because of the discontinuity in states and controls,
-												but also due to the combinatorial nature of possible transition sequences.
-												State-of-the-art solvers struggle to find globally optimal solutions for these problems under nonliner state and input constraints.
-											</p>
-											<p>
-												This work focuses on extending the <a href="#OCP">convex relaxation-based optimal control framework</a> to solving hybrid systems.
-												By introducing measures that capture the trajectories entering and leaving each hybird modes,
-												the proposed method is able to find globally optimal trajectories regardless of transition sequence being potentially unknown.
-											</p>
-											<p>
-												As an exmpale, the proposed method is implemented to solve optimal control of a single-leg hopper, as shown in the above images.
-												The goal in the first image is to jump as high as possible, and the goal in the second image is to slow down from a large horizontal velocity.
-												Other applications include reachability analysis for hybrid systems (e.g.,  <a href="#Robotics">legged robots</a> ).
-											</p>
-										</article>
-
-										<article>
-											<div id="BA"></div>
-											<span class="image left"><img src="images/BA.gif" alt="" width="560" /></span>
-											<h4>Parallel Bernstein Algorithm for Constrained Global Optimization</h4>
-											<p>
-												In this work I developed a parallel algorithm for solving optimization problems with polynomial constraints and cost functions (a.k.a. polynomial optimization problems) using Bernstein expansion.
-												This approach relies upon bounding the values of polynomials in shrinking subsets of the domain (see the animation on the left),
-												and is able to find all global optimizers to polynomial optimization problems within polynomial time.
-											</p>
-											<p>
-												Such algorithm can be implemented on either multi-core CPUs or GPUs to significantly reduce computation time.
-												The rate of convergence of such algorithm is proved to be either linear or quadratic, depending on the problem settings,
-												and a practical bound on the maximum memory usage is provided.
-												This approach is implemented both in MATLAB (CPU) and in CUDA C++ (GPU),
-												and proven faster than generic methods on an array of benchmark examples
-												as well as in a real-world <a href="#Segway">autonomous driving planning task</a>.
 											</p>
 										</article>
 
@@ -361,8 +226,8 @@
 
 										<article>
 											<div id="OCP"></div>
-											<span class="image left"><img src="images/Dubins.png" alt="" width="560" /></span>
-											<h4>Control Synthesis for Nonlinear Optimal Control via Convex Relaxations</h4>
+											<span class="image left"><img src="images/Y90image2.jpg" alt="" width="560" /></span>
+											<h4>Y-90 PET radiomics modeling analysis for response prediction of liver cancer</h4>
 											<p>
 												This work addresses the problem of control synthesis for nonlinear optimal control problems in the presence of state and input constraints.
 												The proposed aproach relies upon transforming the given problem into inifinite-dimensional linear program over the space of measures,
@@ -380,51 +245,6 @@
 												<a href="">stochastic optimal control</a>.
 											</p>
 										</article>
-
-										<article>
-											<div id="HOCP"></div>
-											<span class="image right"><img src="images/HOCP_1.gif" alt="" width="400" />
-											<img src="images/HOCP_2.gif" alt="" width="400" /></span>
-											<h4>Hybrid Optimal Control With Guaranteed Global Convergence</h4>
-											<p>
-												Many dynamical systems may undergo instantaneous state changes due to satisfaction of certain state-dependent constraints.
-												Examples of such systems include legged robots, where the velocity of limbs changes instantaneously due to impacts with the ground.
-												<!-- , and ??? -->
-												The optimal control of hybrid systems are especially difficult to solve not only because of the discontinuity in states and controls,
-												but also due to the combinatorial nature of possible transition sequences.
-												State-of-the-art solvers struggle to find globally optimal solutions for these problems under nonliner state and input constraints.
-											</p>
-											<p>
-												This work focuses on extending the <a href="#OCP">convex relaxation-based optimal control framework</a> to solving hybrid systems.
-												By introducing measures that capture the trajectories entering and leaving each hybird modes,
-												the proposed method is able to find globally optimal trajectories regardless of transition sequence being potentially unknown.
-											</p>
-											<p>
-												As an exmpale, the proposed method is implemented to solve optimal control of a single-leg hopper, as shown in the above images.
-												The goal in the first image is to jump as high as possible, and the goal in the second image is to slow down from a large horizontal velocity.
-												Other applications include reachability analysis for hybrid systems (e.g.,  <a href="#Robotics">legged robots</a> ).
-											</p>
-										</article>
-
-										<article>
-											<div id="BA"></div>
-											<span class="image left"><img src="images/BA.gif" alt="" width="560" /></span>
-											<h4>Parallel Bernstein Algorithm for Constrained Global Optimization</h4>
-											<p>
-												In this work I developed a parallel algorithm for solving optimization problems with polynomial constraints and cost functions (a.k.a. polynomial optimization problems) using Bernstein expansion.
-												This approach relies upon bounding the values of polynomials in shrinking subsets of the domain (see the animation on the left),
-												and is able to find all global optimizers to polynomial optimization problems within polynomial time.
-											</p>
-											<p>
-												Such algorithm can be implemented on either multi-core CPUs or GPUs to significantly reduce computation time.
-												The rate of convergence of such algorithm is proved to be either linear or quadratic, depending on the problem settings,
-												and a practical bound on the maximum memory usage is provided.
-												This approach is implemented both in MATLAB (CPU) and in CUDA C++ (GPU),
-												and proven faster than generic methods on an array of benchmark examples
-												as well as in a real-world <a href="#Segway">autonomous driving planning task</a>.
-											</p>
-										</article>
-
 									</div>
 								</div>
 							</section>
