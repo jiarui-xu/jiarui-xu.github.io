@@ -73,6 +73,12 @@
 										My research interests include deep learning, computer vision, and machine learning.
 									</p>
 									<p>
+										Prior to join Virginia Tech, I received my M.S. degree in Electrical and Computer Engineering from University of Michigan, Ann Arbor.
+										I am fortunate to work with <a href="https://droplab.engin.umich.edu/matthew-johnson-roberson">Prof. Matthew Johnson-Roberson</a>, <a href="https://web.eecs.umich.edu/~fessler/">Prof. Jeffrey A. Fessler</a>, and <a href="https://medicine.umich.edu/dept/radiology/yuni-dewaraja-phd">Prof. Yuni K Dewaraja</a>
+										on different projects.
+										I obtained my B.S. degree in Electrical Engineering from Beijing Institute of Technology.
+									</p>
+									<p>
 										I have done research and projects in a wide variety of areas.
 										During my time at Virginia Tech,
 										I worked on projects related to the <a href="#GAN">image to image translation</a> and <a href="#HOI">human object detection</a>.
@@ -143,13 +149,11 @@
     										<!--<iframe class="youtube-video" src="https://www.youtube.com/embed/Tjos-i271kY"></iframe>-->
 											<!--</div></span>-->
 											<!-- <span class="image right"><iframe width="560" height="315" src="https://www.youtube.com/embed/Tjos-i271kY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span> -->
-											<h4>Spatial-Semantic Relation Network for Human-Object Interaction Detection (Ongoing Work)</h4>
+											<h4>Human-Object Interaction Detection (Ongoing Work)</h4>
 											<p>
 												This work focuses on tackling the challenging problem of human-object interaction (HOI) detection.
-												We propose to use a spatial-semantic representation to describe each human-object pair
-												and leverage a relation module to aggregate contextual information of the scene to resolve ambiguity from local predictions.
-												Our model is conceptually simple and leads to favorable results
-												when compared to the state-of-the-art HOI detection algorithms on two large-scale benchmark datasets.
+												We propose to leverage the relation between different human-object pair to aggregate contextual information of the scene to resolve ambiguity from local predictions.
+												Our model achieves favorable results when compared to the state-of-the-art HOI detection algorithms on two large-scale benchmark datasets.
 											</p>
 										</article>
 
@@ -172,14 +176,17 @@
 											<!--</p>-->
 											<p>
 												This work addresses the classical yet fundamental problem, color image denoising, for image quality enhancement in computer vision.
+												The Multi-channel Weighted Nuclear Norm Minimization (MC-WNNM) method has already achieved a good performance in color image denoising.
+												However, the nuclear norm tends to over-shrink the singular values and it is just a special case of Schatten p-norm.
 											</p>
 											<p>
-												We propose the Multi-channel Weighted Schatten p-Norm Minimization (MC-WSNM) method to address the color image denoising problem, which is based on the Multi-channel Weighted Nuclear Norm Minimization (MC-WNNM) method.
-												Weighted Schatten p-norm is applied as it can guarantee a more accurate recovery of the signal while requiring only a weaker isomery property than tranditional trace norm.
+												The proposed model, namely Multi-channel Weighted Schatten p-Norm Minimization (MC-WSNM),
+												is a more flexible method to address the color image denoising problem.
+												Instead of using the Nuclear norm, weighted Schatten p-norm regularization is applied to guarantee a more accurate recovery of the information and assign different weights to different singular values.
 											</p>
 											<p>
 												The picture shown above is a comparation between the denoising results of our MC-WSNM and MC-WNNM method.
-												Our method has achieved both a higher PSNR and a 10+ times faster speed in denoising than MC-WNNM method
+												Our results show that the proposed method has achieved both a higher PSNR and 10+ times faster speed in denoising than MC-WNNM method
 											</p>
 										</article>
 									</div>
@@ -197,20 +204,14 @@
 											<span class="image left"><img src="images/object_detection.png" alt="" width="560" /></span>
 											<h4>Learning from real world images for object detection in autonomous vehicles</h4>
 											<p>
-												This work addresses the problem of control synthesis for nonlinear optimal control problems in the presence of state and input constraints.
-												The proposed aproach relies upon transforming the given problem into inifinite-dimensional linear program over the space of measures,
-												and convergence to global optima is guaranteed as degree of relaxtion goes up.
+												For autonomous vehicles, it is easy to acquire a large number of images with cameras, but labeling them can be expensive.
+												While current object detector approaches have enabled great advances in detecting cars and pedestrians, they may not transfer well when applied in real-world scenes.
+												In this work, we want to answer the question: can we leverage information within the dataset to adjust object detectors to real-world scenes?
 											</p>
 											<p>
-												The picture shown above is an illustration of proposed method on an LQR version of the Dubins Car problem.
-												The blue circle indicates the given initial state, and the blue dot shows the target point.
-												The ground truth solution for such problem is colored in blue, and red lines are control actions generated by our method.
-											</p>
-											<p>
-												This work can be extended to address <a href="#HOCP">hybrid optimal control</a>,
-												<a href="https://github.com/ramvasudevan/RTD">reachability analysis</a>,
-												<a href="">inverse optimal control</a>, and
-												<a href="">stochastic optimal control</a>.
+												This work proposes to generate annotations on unlabeled data using a model trained on large amounts of labeled data,
+												and then retrain the model using the corrected annotations to improve the performance.
+												We identify the prediction errors using the temporal and stereo information.
 											</p>
 										</article>
 
@@ -229,21 +230,20 @@
 											<span class="image left"><img src="images/Y90image2.jpg" alt="" width="560" /></span>
 											<h4>Y-90 PET radiomics modeling analysis for response prediction of liver cancer</h4>
 											<p>
-												This work addresses the problem of control synthesis for nonlinear optimal control problems in the presence of state and input constraints.
-												The proposed aproach relies upon transforming the given problem into inifinite-dimensional linear program over the space of measures,
-												and convergence to global optima is guaranteed as degree of relaxtion goes up.
+												The work focuses on predicting lesion response in radiobolization of liver cancer patients with lesion characteristics extracted from medical images.
+												We applied LASSO regression to select features that can be applied to predict lesion response and evaluated the robustness of the selected features.
 											</p>
-											<p>
-												The picture shown above is an illustration of proposed method on an LQR version of the Dubins Car problem.
-												The blue circle indicates the given initial state, and the blue dot shows the target point.
-												The ground truth solution for such problem is colored in blue, and red lines are control actions generated by our method.
-											</p>
-											<p>
-												This work can be extended to address <a href="#HOCP">hybrid optimal control</a>,
-												<a href="https://github.com/ramvasudevan/RTD">reachability analysis</a>,
-												<a href="">inverse optimal control</a>, and
-												<a href="">stochastic optimal control</a>.
-											</p>
+											<!--<p>-->
+												<!--The picture shown above is an illustration of proposed method on an LQR version of the Dubins Car problem.-->
+												<!--The blue circle indicates the given initial state, and the blue dot shows the target point.-->
+												<!--The ground truth solution for such problem is colored in blue, and red lines are control actions generated by our method.-->
+											<!--</p>-->
+											<!--<p>-->
+												<!--This work can be extended to address <a href="#HOCP">hybrid optimal control</a>,-->
+												<!--<a href="https://github.com/ramvasudevan/RTD">reachability analysis</a>,-->
+												<!--<a href="">inverse optimal control</a>, and-->
+												<!--<a href="">stochastic optimal control</a>.-->
+											<!--</p>-->
 										</article>
 									</div>
 								</div>
